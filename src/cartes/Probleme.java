@@ -5,7 +5,7 @@ public abstract class Probleme extends Carte {
 	protected Probleme(Type type) {
 		this.type=type;
 	}
-	private Type getType() {
+	public Type getType() {
 		return type;
 	}
 	

@@ -2,8 +2,10 @@ package cartes;
 
 public class Botte extends Probleme {
 
-	public Botte() {
-		// TODO Auto-generated constructor stub
+	public Botte(Type type) {
+		super(type);
 	}
-
+	public String toString() {
+		return getType().botte();
+	}
 }
