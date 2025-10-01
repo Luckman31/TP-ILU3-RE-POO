@@ -38,7 +38,7 @@ public class GestionCartes {
 	}
 	public static <E> boolean verifierMelange(List<E> liste1,List<E> liste2) {
 		if(liste1.size()!=liste2.size()) {
-			return false;
+			return false; 
 		}
 		for(E element:liste1) {
 			if(Collections.frequency(liste1, element)!=Collections.frequency(liste2, element)) {
