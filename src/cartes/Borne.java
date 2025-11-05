@@ -12,9 +12,13 @@ public class Borne extends Carte {
 		chaine.append(km + "KM");
 		return chaine.toString();
 	}
+
 	@Override
 	public boolean equals(Object obj) {
-		return super.equals(obj) && km==((Borne)obj).km;
+		return super.equals(obj) && km == ((Borne) obj).km;
+	}
+	public int getKm() {
+		return km;
 	}
 
 }

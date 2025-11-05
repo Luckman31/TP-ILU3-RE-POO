@@ -57,19 +57,22 @@ public class GestionCartes {
 	}
 
 	public static <E> List<E> rassembler(List<E> liste) {
-	
-		List<E> Rassembler=new ArrayList<>();
-		for(E elem:liste) {
-			if(!Rassembler.contains(elem)) {
-				for(E elem2:liste) {
-					if(elem2.equals(elem)) {
-						Rassembler.add(elem2);
-					}
-				}
+
+		List<E> rassembler = new ArrayList<>();
+		for (E elem : liste) {
+			if (!rassembler.contains(elem)) {
+				ajouterElementsEgaux(liste, rassembler, elem);
 			}
 		}
-		return Rassembler;
+		return rassembler;
 	}
+	private static <E> void ajouterElementsEgaux(List<E> liste, List<E> rassembler, E valeur) {
+        for (E elem : liste) {
+            if (elem.equals(valeur)) {
+            	rassembler.add(elem);
+            }
+        }
+    }
 
 	public static <E> boolean verifierRassemblement(List<E> liste) {
 		if (liste.isEmpty()) {
